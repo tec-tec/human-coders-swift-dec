@@ -7,16 +7,21 @@ struct Coordinate {
     let longitude: Double
 }
 
-enum PokemonType {
-    case fire
-    case water
-    case electric
-    case unknown
-}
-
 struct Pokemon {
-    var name: String
+
+    enum PokemonType {
+        case fire
+        case water
+        case electric
+        case unknown
+    }
+
+    let name: String
+
+    //Stored property
     var level: Int
+
+    //Computed property
     var force: Float {
         return Float(level) * 1.5
     }
@@ -55,6 +60,11 @@ class Pokedex {
     }
 
     func listOrderedByName() -> [Pokemon] {
-        
+        return pokemons
     }
 }
+
+// Computed properties
+// Tri
+// Remove (vérifier l'égalité en pokemons)
+// Coller une interface !
