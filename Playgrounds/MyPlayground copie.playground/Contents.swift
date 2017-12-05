@@ -1,5 +1,7 @@
 //: Playground - noun: a place where people can play
 
+import Foundation
+
 //: # Swift
 
 //: ## Variables
@@ -126,29 +128,178 @@ func sum(_ a: Int, adding b: Int) -> (op1: Int, op2: Int, sum: Int) {
 let result = sum(2, adding: 3)
 result.sum
 
+//: ## Enums
+
+//Raw values (String/Character/Int/Double/Float)
+enum PokemonType: String {
+    case water = "eau"
+    case fire
+    case electric = "⚡️"
+    case unknown
+}
+
+let typeElectric = PokemonType.electric
+
+let stringType = "eau"
+let t = PokemonType(rawValue: stringType)
+typeElectric.rawValue
 
 struct Position {
 
 }
 
+//Associated values
+enum CapturedState {
+    case captured (captureDate: Date, capturePosition: Position)
+    case notCaptured
+
+    func stringValue() -> String {
+        switch self {
+        case .captured:
+        return "Capturé"
+        case .notCaptured:
+            return "Non capturé"
+        }
+    }
+}
+
+var cap = CapturedState.notCaptured
+cap.stringValue()
+let now = Date()
+let here = Position()
+
+cap = .captured(captureDate: now, capturePosition: here)
+cap.stringValue()
+
+//: ## Optionals
+
+var nbHabitants = ["Paris" : 2250000, "Bordeaux" : 239000, "Lyon" : 491268, "Marseille" : 850636]
+
+// If-Let récupère, test, et déballe si valeur il y a
+if let r = nbHabitants["Lyon"] {
+    r * 2
+} else {
+    print("Pas de valeurs pour la population")
+}
+
+if let type = PokemonType(rawValue: "eau") {
+    type
+} else {
+
+}
+
+guard let hab = nbHabitants["Lyon"] else { fatalError() }
+hab * 2
+
+//Nil coalesing operator (fournir des valeurs par défaut si == nil)
+// TYPE = TYPE? ?? TYPE
+let type2 = PokemonType(rawValue: "") ?? .unknown
+
+
+
+//: ## Modèle
+
+
 class Pokemon {
 
+    var name: String = "Pikachu"
 }
 
 class Pokedex {
 
+    var firstPokemon: Pokemon?
+}
+
+let dex = Pokedex()
+//dex.firstPokemon = Pokemon()
+
+if let nameOfMyFirstPokemon = dex.firstPokemon?.name {
+    print("Mon premier pokemon est \(nameOfMyFirstPokemon)")
+}
+
+let latitude = Double(arc4random_uniform(900000)) / 10000.0
+let longitude = Double(arc4random_uniform(180000)) / 10000.0
+
+let today = Date()
+
+var villes = ["Paris","Bordeaux","Lyon","Marseille"]
+
+nbHabitants["Paris"]
+villes[2]
+
+villes.append("Lille")
+nbHabitants["Lille"] = 10
+nbHabitants["Lille"] = 100
+nbHabitants
+
+nbHabitants.removeValue(forKey: "Lille")
+
+// list -> Array
+// map -> Dictionary
+// set -> Set
+
+let citiesIveBeen: Set = ["Bordeaux", "Paris", "San Francisco"]
+
+var cities: Set<String> = []
+cities.insert("Paris")
+cities.insert("Paris")
+cities
+
+
+
+
+let count = villes.count
+
+for i in 0...10 {
+    print(i)
+}
+
+for ville in villes {
+    print(ville)
+}
+
+for v in citiesIveBeen {
+    print(v)
+}
+
+for (ville, hab) in nbHabitants {
+    print(ville)
+    print(hab)
+}
+
+for c in "Hello le monde" {
+    print(c)
+}
+
+let majeur = true
+
+guard majeur else {
+    fatalError("Tu es trop jeune")
+}
+
+print("test")
+
+
+
+
+
+func something(with age: Int?) {
+
+    guard let a = age else { return }
+
+    let maj: Bool
+    if a < 18 {
+        maj = false
+    } else {
+        maj = true
+    }
+
+    maj
+    print(a * 25)
 }
 
 
-
-
-
-
-
-
-
-
-
+something(with: nil)
 
 
 
