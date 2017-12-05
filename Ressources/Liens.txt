@@ -1,4 +1,8 @@
 # App Store Review Guidelines
-
 https://developer.apple.com/app-store/review/guidelines/
 
+# Awesome iOS : A curated list of awesome iOS frameworks, libraries, etc.
+http://awesomeios.com/
+
+# Cocoa Controls : 5851 open source UI components for iOS, macOS, tvOS, and watchOS
+https://www.cocoacontrols.com
