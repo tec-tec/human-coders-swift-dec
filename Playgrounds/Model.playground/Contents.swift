@@ -7,7 +7,40 @@ struct Coordinate {
     let longitude: Double
 }
 
-struct Pokemon {
+protocol Mappable {
+
+    var coordinates: Coordinate { get }
+    var name: String { get }
+}
+
+protocol AddressConvertible {
+    var coordinates: Coordinate { get }
+    var address: String { get set }
+
+    func validate()
+}
+
+struct Pokestop: Mappable {
+
+    var coordinates: Coordinate
+    var name: String
+}
+
+struct Pokemon: Equatable, Mappable {
+
+    static let maxLevel = 99
+
+    var coordinates: Coordinate {
+        return captureLocation ?? Coordinate(latitude: 0.0, longitude: 0.0)
+    }
+
+    static func ==(lhs: Pokemon, rhs: Pokemon) -> Bool {
+        if lhs.name == rhs.name && lhs.level == rhs.level && lhs.type == rhs.type && lhs.weight == rhs.weight {
+            return true
+        } else {
+            return false
+        }
+    }
 
     enum PokemonType {
         case fire
@@ -54,6 +87,7 @@ struct Pokemon {
     // Mutating indicates that the method will mutate the instance
     // Mutating func can't be called on let instances
     mutating func levelUp() {
+        guard level < Pokemon.maxLevel else { return }
         level = level + 1
     }
 }
