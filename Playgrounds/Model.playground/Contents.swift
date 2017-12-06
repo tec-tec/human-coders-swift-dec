@@ -44,9 +44,10 @@ struct Pokemon {
         }
     }
 
+    // Stored properties with private set (can't be modified outside of the Pokemon type)
+    private(set) var captureLocation: Coordinate?
+    private(set) var captureDate: Date?
 
-    var captureLocation: Coordinate?
-    var captureDate: Date?
     var weight: Float
     let type: PokemonType
 
@@ -80,3 +81,13 @@ class Pokedex {
 // Tri
 // Remove (vérifier l'égalité en pokemons)
 // Coller une interface !
+
+var pika = Pokemon(name: "Pikachu", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
+
+pika.captureDate
+pika.isCaptured = true
+//pika.captureDate = nil
+pika.captureDate
+pika.isCaptured = false
+pika.captureDate
+
