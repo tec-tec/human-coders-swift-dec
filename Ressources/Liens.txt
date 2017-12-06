@@ -6,3 +6,15 @@ http://awesomeios.com/
 
 # Cocoa Controls : 5851 open source UI components for iOS, macOS, tvOS, and watchOS
 https://www.cocoacontrols.com
+
+# Conférence FrenchKit
+http://frenchkit.fr/
+
+# Conférence dotSwift
+https://www.dotswift.io
+
+# Cocoaheads
+http://cocoaheads.fr
+
+# Swift Paris Meetup
+https://www.meetup.com/fr-FR/swiftparis/
