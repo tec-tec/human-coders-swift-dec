@@ -105,7 +105,8 @@ class Pokedex {
     }
 
     func remove(_ p: Pokemon) {
-
+        guard let index = pokemons.index(of: p) else { return }
+        pokemons.remove(at: index)
     }
 
     func listOrderedByName() -> [Pokemon] {
@@ -121,8 +122,6 @@ class Pokedex {
     }
 }
 
-// Tri
-// Remove (vérifier l'égalité en pokemons)
 // Coller une interface !
 
 var pika = Pokemon(name: "Pikachu", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
