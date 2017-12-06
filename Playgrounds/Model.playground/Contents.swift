@@ -75,7 +75,15 @@ class Pokedex {
     }
 
     func listOrderedByName() -> [Pokemon] {
-        return pokemons
+
+        // Utilisation d'un closure de tri
+        let sortedPokemons = pokemons.sorted { (p1, p2: Pokemon) -> Bool in
+            //Code de tri
+            let areOrdered = p1.name < p2.name
+            return areOrdered
+        }
+
+        return sortedPokemons
     }
 }
 
@@ -83,13 +91,17 @@ class Pokedex {
 // Remove (vérifier l'égalité en pokemons)
 // Coller une interface !
 
-let pika = Pokemon(name: "Pikachu", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
+var pika = Pokemon(name: "Pikachu", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
+var cara = Pokemon(name: "Carapuce", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
+var sala = Pokemon(name: "Salameche", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
+var rondou = Pokemon(name: "Rondoudou", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
 
-pika.captureDate
-pika.isCaptured = true
-//pika.captureDate = nil
-pika.captureDate
-pika.isCaptured = false
-pika.captureDate
+let dex = Pokedex()
+dex.add(pika)
+dex.add(cara)
+dex.add(sala)
+dex.add(rondou)
 
-pika.levelUp()
+let tabPokemon = dex.list()
+dex.listOrderedByName()
+
