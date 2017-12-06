@@ -21,7 +21,7 @@ struct Pokemon {
     //Stored property
     var level: Int
 
-    //Computed property
+    //Computed property (get-only)
     var force: Float {
         return Float(level) * 1.5
     }
