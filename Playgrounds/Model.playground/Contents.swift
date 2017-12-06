@@ -25,18 +25,30 @@ struct Pokemon {
     var force: Float {
         return Float(level) * 1.5
     }
-    var isCaptured: Bool
+
+    // Observed stored property
+    var isCaptured: Bool {
+        willSet {
+            isCaptured //false
+            newValue // true
+        }
+
+        didSet {
+            if isCaptured {
+                captureLocation = Coordinate(latitude: 0.0, longitude: 0.0)
+                captureDate = Date()
+            } else {
+                captureLocation = nil
+                captureDate = nil
+            }
+        }
+    }
+
+
     var captureLocation: Coordinate?
     var captureDate: Date?
     var weight: Float
     let type: PokemonType
-
-    mutating func captured() {
-        guard !isCaptured else { return }
-        isCaptured = true
-        captureDate = Date()
-        captureLocation = Coordinate(latitude: 0.0, longitude: 0.0)
-    }
 
     func levelUp() {
         //To Do
