@@ -22,6 +22,7 @@
 		3328D8FC1FD82DD2006EF67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3328D8FF1FD82DD2006EF67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3328D9011FD82DD2006EF67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F8A1771FD83F5400A8A180 /* PokeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokeList.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		3328D8F41FD82DD1006EF67C /* PokeList */ = {
 			isa = PBXGroup;
 			children = (
+				33F8A1771FD83F5400A8A180 /* PokeList.entitlements */,
 				3328D8F51FD82DD2006EF67C /* AppDelegate.swift */,
 				3328D8F71FD82DD2006EF67C /* ViewController.swift */,
 				3328D8F91FD82DD2006EF67C /* Main.storyboard */,
@@ -97,6 +99,11 @@
 					3328D8F11FD82DD1006EF67C = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -274,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PokeList/PokeList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = PokeList/Info.plist;
@@ -289,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PokeList/PokeList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = PokeList/Info.plist;

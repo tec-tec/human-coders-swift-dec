@@ -11,9 +11,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
 
     }
 
@@ -22,5 +25,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: - Actions
 
+    @IBAction func showTextFieldContent(_ sender: UIButton) {
+        nameTextField.text = "Hello"
+        sender.backgroundColor = UIColor.red
+    }
 }
