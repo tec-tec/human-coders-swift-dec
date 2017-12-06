@@ -51,8 +51,10 @@ struct Pokemon {
     var weight: Float
     let type: PokemonType
 
-    func levelUp() {
-        //To Do
+    // Mutating indicates that the method will mutate the instance
+    // Mutating func can't be called on let instances
+    mutating func levelUp() {
+        level = level + 1
     }
 }
 
@@ -77,12 +79,11 @@ class Pokedex {
     }
 }
 
-// Computed properties
 // Tri
 // Remove (vérifier l'égalité en pokemons)
 // Coller une interface !
 
-var pika = Pokemon(name: "Pikachu", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
+let pika = Pokemon(name: "Pikachu", level: 10, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 7.9, type: .electric)
 
 pika.captureDate
 pika.isCaptured = true
@@ -91,3 +92,4 @@ pika.captureDate
 pika.isCaptured = false
 pika.captureDate
 
+pika.levelUp()
