@@ -33,8 +33,10 @@ class ViewController: UIViewController {
 
     //MARK: - Actions
 
-    @IBAction func sliderValueChanged(_ sender: Any) {
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
 
+        let rounded = round(sender.value)
+        levelLabel.text = "\(Int(rounded))"
     }
 
     @IBAction func save(_ sender: Any) {
