@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        configureUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +47,21 @@ class ViewController: UIViewController {
     @IBAction func backTapped(_ sender: Any) {
 
         view.endEditing(false)
+    }
+
+    //MARK: - Private methods
+    private func configureUI() {
+
+        //Remove all previous segments
+        styleSegmentedControl.removeAllSegments()
+
+        //Add segments from the enum
+        for type in Pokemon.PokemonType.allTypes {
+            styleSegmentedControl.insertSegment(withTitle: type.emojiValue, at: type.rawValue, animated: false)
+        }
+
+        //Select the "unknown" type by default
+        styleSegmentedControl.selectedSegmentIndex = Pokemon.PokemonType.unknown.rawValue
     }
 }
 
