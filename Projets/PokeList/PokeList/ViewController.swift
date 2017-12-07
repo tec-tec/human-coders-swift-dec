@@ -12,6 +12,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var styleSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var levelSlider: UISlider!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var isCapturedSwitch: UISwitch!
+    @IBOutlet weak var weightTextField: UITextField!
+
+    var dex = Pokedex()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +34,16 @@ class ViewController: UIViewController {
 
     //MARK: - Actions
 
-    @IBAction func showTextFieldContent(_ sender: UIButton) {
-        nameTextField.text = "Hello"
-        sender.backgroundColor = UIColor.red
+    @IBAction func sliderValueChanged(_ sender: Any) {
+        
+    }
+
+    @IBAction func save(_ sender: Any) {
+
     }
 }
+
+
+
+
+
