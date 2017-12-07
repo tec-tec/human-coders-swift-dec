@@ -34,11 +34,14 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RiS-sZ-pWN">
-                                <rect key="frame" x="16" y="140" width="343" height="28"/>
+                                <rect key="frame" x="16" y="140" width="343" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Fire"/>
+                                    <segment title="Water"/>
+                                    <segment title="Electric"/>
+                                    <segment title="Ice"/>
+                                    <segment title="Unknown"/>
                                 </segments>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpm-ga-zXh">
