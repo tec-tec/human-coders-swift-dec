@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     @IBAction func sliderValueChanged(_ sender: UISlider) {
 
         let rounded = round(sender.value)
+        sender.value = rounded
         levelLabel.text = "\(Int(rounded))"
     }
 
