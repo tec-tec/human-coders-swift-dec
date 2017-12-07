@@ -24,11 +24,31 @@ struct Pokemon: Equatable, Mappable {
         }
     }
 
-    enum PokemonType {
+    enum PokemonType: Int {
         case fire
         case water
         case electric
+        case ice
         case unknown
+
+        var emojiValue: String {
+            switch self {
+            case .fire:
+                return "🔥"
+            case .water:
+                return "💧"
+            case .electric:
+                return "⚡️"
+            case .ice:
+                return "❄️"
+            case .unknown:
+                return "❓"
+            }
+        }
+
+        static var allTypes: [PokemonType] {
+            return [.fire, .water, .electric, .ice, .unknown]
+        }
     }
 
     let name: String
