@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,11 +34,16 @@ class ViewController: UIViewController {
     //MARK: - Actions
 
     @IBAction func sliderValueChanged(_ sender: Any) {
-        
+
     }
 
     @IBAction func save(_ sender: Any) {
 
+    }
+
+    @IBAction func backTapped(_ sender: Any) {
+
+        view.endEditing(false)
     }
 }
 
