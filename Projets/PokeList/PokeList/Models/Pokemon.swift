@@ -29,6 +29,7 @@ struct Pokemon: Equatable, Mappable {
         case water
         case electric
         case ice
+        case grass
         case unknown
 
         var emojiValue: String {
@@ -41,13 +42,15 @@ struct Pokemon: Equatable, Mappable {
                 return "⚡️"
             case .ice:
                 return "❄️"
+            case .grass:
+                return "🌿"
             case .unknown:
                 return "❓"
             }
         }
 
         static var allTypes: [PokemonType] {
-            return [.fire, .water, .electric, .ice, .unknown]
+            return [.fire, .water, .electric, .ice, .grass, .unknown]
         }
     }
 
