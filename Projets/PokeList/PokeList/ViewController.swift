@@ -70,6 +70,8 @@ class ViewController: UIViewController {
 
         //Select the "unknown" type by default
         styleSegmentedControl.selectedSegmentIndex = Pokemon.PokemonType.unknown.rawValue
+
+    styleSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:styleSegmentedControl.tintColor], for: .selected)
     }
 }
 
