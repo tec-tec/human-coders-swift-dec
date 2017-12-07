@@ -42,6 +42,14 @@ class ViewController: UIViewController {
 
     @IBAction func save(_ sender: Any) {
 
+        guard let name = nameTextField.text, !name.isEmpty else { return }
+        guard let type = Pokemon.PokemonType(rawValue: styleSegmentedControl.selectedSegmentIndex) else { return }
+        let level = Int(round(levelSlider.value))
+        let captured = isCapturedSwitch.isOn
+        guard let weightString = weightTextField.text, let weight = Float(weightString) else { return }
+
+        let newPokemon = Pokemon(name: name, level: level, isCaptured: captured, captureLocation: nil, captureDate: nil, weight: weight, type: type)
+        dex.add(newPokemon)
     }
 
     @IBAction func backTapped(_ sender: Any) {
