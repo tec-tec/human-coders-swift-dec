@@ -17,6 +17,11 @@ class PokemonListTableViewController: UITableViewController {
 
         dex.add(Pokemon(name: "Pikachu", level: 1, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 3, type: .electric))
         dex.add(Pokemon(name: "Carapuce", level: 12, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 3, type: .water))
+
+        let notCenter = NotificationCenter.default
+        notCenter.addObserver(forName: Notification.Name("modelChanged"), object: dex, queue: OperationQueue.main) { (notif) in
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,8 +65,8 @@ class PokemonListTableViewController: UITableViewController {
 
             let currentPokemon = dex.list()[indexPath.row]
             dex.remove(currentPokemon)
-
             tableView.deleteRows(at: [indexPath], with: .fade)
+
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    

@@ -31,8 +31,6 @@ class Pokedex {
     func remove(_ p: Pokemon) {
         guard let index = pokemons.index(of: p) else { return }
         pokemons.remove(at: index)
-
-        notifyChanges()
     }
 
     func listOrderedByName() -> [Pokemon] {
