@@ -20,6 +20,8 @@ class Pokedex {
 
     func add(_ p: Pokemon) {
         pokemons.append(p)
+
+        notifyChanges()
     }
 
     func list() -> [Pokemon] {
@@ -29,6 +31,8 @@ class Pokedex {
     func remove(_ p: Pokemon) {
         guard let index = pokemons.index(of: p) else { return }
         pokemons.remove(at: index)
+
+        notifyChanges()
     }
 
     func listOrderedByName() -> [Pokemon] {
@@ -41,5 +45,11 @@ class Pokedex {
         }
 
         return sortedPokemons
+    }
+
+    private func notifyChanges() {
+
+        let notCenter = NotificationCenter.default
+        notCenter.post(name: Notification.Name("modelChanged"), object: self)
     }
 }
