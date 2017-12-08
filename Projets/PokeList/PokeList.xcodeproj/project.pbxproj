@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3328D8F61FD82DD2006EF67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328D8F51FD82DD2006EF67C /* AppDelegate.swift */; };
-		3328D8F81FD82DD2006EF67C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328D8F71FD82DD2006EF67C /* ViewController.swift */; };
+		3328D8F81FD82DD2006EF67C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328D8F71FD82DD2006EF67C /* FormViewController.swift */; };
 		3328D8FB1FD82DD2006EF67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3328D8F91FD82DD2006EF67C /* Main.storyboard */; };
 		3328D8FD1FD82DD2006EF67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3328D8FC1FD82DD2006EF67C /* Assets.xcassets */; };
 		3328D9001FD82DD2006EF67C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3328D8FE1FD82DD2006EF67C /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		3328D8F21FD82DD1006EF67C /* PokeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3328D8F51FD82DD2006EF67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3328D8F71FD82DD2006EF67C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3328D8F71FD82DD2006EF67C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		3328D8FA1FD82DD2006EF67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3328D8FC1FD82DD2006EF67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3328D8FF1FD82DD2006EF67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			children = (
 				33F8A1771FD83F5400A8A180 /* PokeList.entitlements */,
 				3328D8F51FD82DD2006EF67C /* AppDelegate.swift */,
-				3328D8F71FD82DD2006EF67C /* ViewController.swift */,
+				3328D8F71FD82DD2006EF67C /* FormViewController.swift */,
 				33DCF5CC1FDA9A2C00B06786 /* PokemonListTableViewController.swift */,
 				33DCF5C91FD9340200B06786 /* Models */,
 				3328D8F91FD82DD2006EF67C /* Main.storyboard */,
@@ -165,7 +165,7 @@
 			files = (
 				33DCF5C61FD932F700B06786 /* Pokedex.swift in Sources */,
 				33DCF5CD1FDA9A2C00B06786 /* PokemonListTableViewController.swift in Sources */,
-				3328D8F81FD82DD2006EF67C /* ViewController.swift in Sources */,
+				3328D8F81FD82DD2006EF67C /* FormViewController.swift in Sources */,
 				3328D8F61FD82DD2006EF67C /* AppDelegate.swift in Sources */,
 				33DCF5C41FD932ED00B06786 /* Pokemon.swift in Sources */,
 				33DCF5C81FD9335D00B06786 /* Coordinate.swift in Sources */,

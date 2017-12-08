@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FormViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var styleSegmentedControl: UISegmentedControl!
@@ -50,6 +50,8 @@ class ViewController: UIViewController {
 
         let newPokemon = Pokemon(name: name, level: level, isCaptured: captured, captureLocation: nil, captureDate: nil, weight: weight, type: type)
         dex.add(newPokemon)
+
+        print(dex.list())
     }
 
     @IBAction func backTapped(_ sender: Any) {
