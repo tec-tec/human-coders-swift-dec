@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Pokedex {
+class Pokedex: Codable {
 
     static let shared: Pokedex = Pokedex()
 
@@ -25,6 +25,8 @@ class Pokedex {
 
         let prefs = UserDefaults.standard
         prefs.set(p.name, forKey: "lastAddedPokemon")
+
+        save()
     }
 
     func list() -> [Pokemon] {
@@ -34,6 +36,7 @@ class Pokedex {
     func remove(_ p: Pokemon) {
         guard let index = pokemons.index(of: p) else { return }
         pokemons.remove(at: index)
+        save()
     }
 
     func listOrderedByName() -> [Pokemon] {
@@ -46,6 +49,30 @@ class Pokedex {
         }
 
         return sortedPokemons
+    }
+
+    func save() {
+
+        let encoder = JSONEncoder()
+
+//        do {
+//            let data = try encoder.encode(self)
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+
+        if let data = try? encoder.encode(self) {
+
+            //Save to disk
+        }
+    }
+
+    static func savedData(data: Data) {
+
+        let decoder = JSONDecoder()
+        //Read from disk
+        guard let dex = try? decoder.decode(Pokedex.self, from: data) else { return }
+        print(dex.list().first?.name)
     }
 
     private func notifyChanges() {

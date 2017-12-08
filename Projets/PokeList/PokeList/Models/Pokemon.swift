@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Pokemon: Equatable, Mappable {
+struct Pokemon: Equatable, Mappable, Codable {
 
     static let maxLevel = 99
 
@@ -24,7 +24,7 @@ struct Pokemon: Equatable, Mappable {
         }
     }
 
-    enum PokemonType: Int {
+    enum PokemonType: Int, Codable {
         case fire
         case water
         case electric
