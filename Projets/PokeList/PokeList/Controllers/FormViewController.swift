@@ -33,6 +33,10 @@ class FormViewController: UIViewController {
 
     //MARK: - Actions
 
+    @IBAction func cancel(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+
     @IBAction func sliderValueChanged(_ sender: UISlider) {
 
         let rounded = round(sender.value)
@@ -52,6 +56,10 @@ class FormViewController: UIViewController {
         dex.add(newPokemon)
 
         print(dex.list())
+
+        
+
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func backTapped(_ sender: Any) {

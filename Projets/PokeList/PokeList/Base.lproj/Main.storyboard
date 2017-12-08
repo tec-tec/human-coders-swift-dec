@@ -196,6 +196,15 @@
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ch-ge-2sO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDS-3J-quO">
+                                <rect key="frame" x="224.66666666666666" y="338" width="47.999999999999972" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.1244706731" blue="0.1686318336" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmd-bZ-zfA"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-xn-yfY">
                                 <rect key="frame" x="447" y="197" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,8 +216,10 @@
                             <constraint firstItem="Ij1-Ho-iH7" firstAttribute="top" secondItem="gf3-ds-4xI" secondAttribute="bottom" constant="8" id="12L-z4-Ifg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gf3-ds-4xI" secondAttribute="trailing" id="HEU-YE-HZg"/>
                             <constraint firstItem="Ij1-Ho-iH7" firstAttribute="centerX" secondItem="gf3-ds-4xI" secondAttribute="centerX" id="PNE-Kv-47Q"/>
+                            <constraint firstItem="EDS-3J-quO" firstAttribute="centerY" secondItem="Ij1-Ho-iH7" secondAttribute="centerY" id="SZm-Ka-Hss"/>
                             <constraint firstItem="gf3-ds-4xI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a61-9E-Xuw"/>
                             <constraint firstItem="gf3-ds-4xI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mIU-hE-9xz"/>
+                            <constraint firstItem="EDS-3J-quO" firstAttribute="leading" secondItem="Ij1-Ho-iH7" secondAttribute="trailing" constant="20" id="oGk-0j-IaR"/>
                             <constraint firstItem="gf3-ds-4xI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qOj-rV-gNw"/>
                             <constraint firstItem="Ij1-Ho-iH7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="x1k-Za-ofi"/>
                         </constraints>
@@ -250,7 +261,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="895" y="-259"/>
+            <point key="canvasLocation" x="893.60000000000002" y="-259.35960591133005"/>
         </scene>
         <!--Liste-->
         <scene sceneID="l0x-DL-cuD">
