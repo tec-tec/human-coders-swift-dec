@@ -10,7 +10,7 @@ import Foundation
 
 class Pokedex: Codable {
 
-    static let shared: Pokedex = Pokedex()
+    static let shared: Pokedex = Pokedex.savedData()
 
     private init() {
         pokemons = []
@@ -64,15 +64,29 @@ class Pokedex: Codable {
         if let data = try? encoder.encode(self) {
 
             //Save to disk
+            if let url = Pokedex.savedDataDirectoryURL() {
+                try? data.write(to: url)
+                print(url)
+            }
         }
     }
 
-    static func savedData(data: Data) {
+    static func savedDataDirectoryURL() -> URL? {
 
+        let fm = FileManager.default
+        let url = fm.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("savedData.json")
+
+        return url
+    }
+
+    static func savedData() -> Pokedex {
+
+        guard let url = savedDataDirectoryURL() else { return Pokedex() }
+        guard let data = try? Data(contentsOf: url) else { return Pokedex() }
         let decoder = JSONDecoder()
-        //Read from disk
-        guard let dex = try? decoder.decode(Pokedex.self, from: data) else { return }
-        print(dex.list().first?.name)
+        guard let dex = try? decoder.decode(Pokedex.self, from: data) else { return Pokedex() }
+
+        return dex
     }
 
     private func notifyChanges() {
