@@ -15,13 +15,14 @@ class PokemonListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dex.add(Pokemon(name: "Pikachu", level: 1, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 3, type: .electric))
-        dex.add(Pokemon(name: "Carapuce", level: 12, isCaptured: false, captureLocation: nil, captureDate: nil, weight: 3, type: .water))
-
         let notCenter = NotificationCenter.default
         notCenter.addObserver(forName: Notification.Name("modelChanged"), object: dex, queue: OperationQueue.main) { (notif) in
             self.tableView.reloadData()
         }
+
+        let prefs = UserDefaults.standard
+        let str = prefs.string(forKey: "lastAddedPokemon")
+        print(str)
     }
 
     override func didReceiveMemoryWarning() {

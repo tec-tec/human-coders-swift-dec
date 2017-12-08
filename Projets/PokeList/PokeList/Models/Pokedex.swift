@@ -22,6 +22,9 @@ class Pokedex {
         pokemons.append(p)
 
         notifyChanges()
+
+        let prefs = UserDefaults.standard
+        prefs.set(p.name, forKey: "lastAddedPokemon")
     }
 
     func list() -> [Pokemon] {
