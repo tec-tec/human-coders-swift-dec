@@ -44,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		330F5DA01FDA9DB60040EBB5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3328D8F71FD82DD2006EF67C /* FormViewController.swift */,
+				33DCF5CC1FDA9A2C00B06786 /* PokemonListTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3328D8E91FD82DD1006EF67C = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +74,7 @@
 			children = (
 				33F8A1771FD83F5400A8A180 /* PokeList.entitlements */,
 				3328D8F51FD82DD2006EF67C /* AppDelegate.swift */,
-				3328D8F71FD82DD2006EF67C /* FormViewController.swift */,
-				33DCF5CC1FDA9A2C00B06786 /* PokemonListTableViewController.swift */,
+				330F5DA01FDA9DB60040EBB5 /* Controllers */,
 				33DCF5C91FD9340200B06786 /* Models */,
 				3328D8F91FD82DD2006EF67C /* Main.storyboard */,
 				3328D8FC1FD82DD2006EF67C /* Assets.xcassets */,
