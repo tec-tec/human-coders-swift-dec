@@ -46,7 +46,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="ySa-Ok-X0K" kind="show" id="ox3-si-JNq"/>
+                                    <segue destination="ySa-Ok-X0K" kind="show" identifier="showDetails" id="ox3-si-JNq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -58,7 +58,7 @@
                     <navigationItem key="navigationItem" id="2CN-UH-DMV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5FR-Fq-HCY">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="y9h-N5-zFx"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="showForm" id="y9h-N5-zFx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -329,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="-701.60000000000002" y="781.77339901477831"/>
         </scene>
-        <!--Title-->
+        <!--Pokemon Details View Controller-->
         <scene sceneID="ajf-Pj-OA1">
             <objects>
-                <viewController id="ySa-Ok-X0K" sceneMemberID="viewController">
+                <viewController id="ySa-Ok-X0K" customClass="PokemonDetailsViewController" customModule="PokeList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bk8-vh-tgR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,8 +349,7 @@
                         <viewLayoutGuide key="safeArea" id="Ki6-Kq-C3p"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="Xc5-DW-lg0"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" id="Xc5-DW-lg0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpc-CM-c6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

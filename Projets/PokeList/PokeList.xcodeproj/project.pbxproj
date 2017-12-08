@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330F5DA21FDADDFF0040EBB5 /* PokemonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F5DA11FDADDFF0040EBB5 /* PokemonDetailsViewController.swift */; };
 		3328D8F61FD82DD2006EF67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328D8F51FD82DD2006EF67C /* AppDelegate.swift */; };
 		3328D8F81FD82DD2006EF67C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328D8F71FD82DD2006EF67C /* FormViewController.swift */; };
 		3328D8FB1FD82DD2006EF67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3328D8F91FD82DD2006EF67C /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330F5DA11FDADDFF0040EBB5 /* PokemonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewController.swift; sourceTree = "<group>"; };
 		3328D8F21FD82DD1006EF67C /* PokeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3328D8F51FD82DD2006EF67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3328D8F71FD82DD2006EF67C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			children = (
 				3328D8F71FD82DD2006EF67C /* FormViewController.swift */,
 				33DCF5CC1FDA9A2C00B06786 /* PokemonListTableViewController.swift */,
+				330F5DA11FDADDFF0040EBB5 /* PokemonDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				33DCF5CD1FDA9A2C00B06786 /* PokemonListTableViewController.swift in Sources */,
 				3328D8F81FD82DD2006EF67C /* FormViewController.swift in Sources */,
 				3328D8F61FD82DD2006EF67C /* AppDelegate.swift in Sources */,
+				330F5DA21FDADDFF0040EBB5 /* PokemonDetailsViewController.swift in Sources */,
 				33DCF5C41FD932ED00B06786 /* Pokemon.swift in Sources */,
 				33DCF5C81FD9335D00B06786 /* Coordinate.swift in Sources */,
 			);
