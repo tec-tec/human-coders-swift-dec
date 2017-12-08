@@ -49,6 +49,23 @@ struct Pokemon: Equatable, Mappable {
             }
         }
 
+        var color: (red: Double, green: Double, blue: Double) {
+            switch self {
+            case .fire:
+                return (1.00, 0.70, 0.22)
+            case .water:
+                return (red:0.20, green:1.00, blue:0.82)
+            case .electric:
+                return (red:1.00, green:0.86, blue:0.24)
+            case .ice:
+                return (red:0.00, green:0.71, blue:0.98)
+            case .grass:
+                return (red:0.00, green:0.71, blue:0.37)
+            case .unknown:
+                return (1,1,1)
+            }
+        }
+
         static var allTypes: [PokemonType] {
             return [.fire, .water, .electric, .ice, .grass, .unknown]
         }

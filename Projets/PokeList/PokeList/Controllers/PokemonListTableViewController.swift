@@ -38,6 +38,8 @@ class PokemonListTableViewController: UITableViewController {
 
         cell.textLabel?.text = currentPokemon.name
         cell.detailTextLabel?.text = "Niveau : \(currentPokemon.level)"
+        let color = currentPokemon.type.color
+        cell.backgroundColor = UIColor(red: CGFloat(color.red), green: CGFloat(color.green), blue: CGFloat(color.blue), alpha: 1)
 
         return cell
     }
