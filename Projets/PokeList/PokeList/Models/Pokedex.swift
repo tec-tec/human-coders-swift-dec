@@ -10,7 +10,13 @@ import Foundation
 
 class Pokedex {
 
-    var pokemons = [Pokemon]()
+    static let shared: Pokedex = Pokedex()
+
+    private init() {
+        pokemons = []
+    }
+
+    var pokemons: [Pokemon]
 
     func add(_ p: Pokemon) {
         pokemons.append(p)

@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonListTableViewController: UITableViewController {
 
-    let dex = Pokedex()
+    let dex = Pokedex.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,7 @@ class PokemonListTableViewController: UITableViewController {
 
             let currentPokemon = dex.list()[indexPath.row]
             dex.remove(currentPokemon)
-            
+
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

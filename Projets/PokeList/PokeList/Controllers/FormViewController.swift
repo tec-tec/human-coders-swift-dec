@@ -18,7 +18,7 @@ class FormViewController: UIViewController {
     @IBOutlet weak var isCapturedSwitch: UISwitch!
     @IBOutlet weak var weightTextField: UITextField!
 
-    var dex = Pokedex()
+    var dex = Pokedex.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
