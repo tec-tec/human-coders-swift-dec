@@ -15,6 +15,7 @@
 		33DCF5C41FD932ED00B06786 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF5C31FD932ED00B06786 /* Pokemon.swift */; };
 		33DCF5C61FD932F700B06786 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF5C51FD932F700B06786 /* Pokedex.swift */; };
 		33DCF5C81FD9335D00B06786 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF5C71FD9335D00B06786 /* Coordinate.swift */; };
+		33DCF5CD1FDA9A2C00B06786 /* PokemonListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF5CC1FDA9A2C00B06786 /* PokemonListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		33DCF5C31FD932ED00B06786 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		33DCF5C51FD932F700B06786 /* Pokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
 		33DCF5C71FD9335D00B06786 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		33DCF5CC1FDA9A2C00B06786 /* PokemonListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListTableViewController.swift; sourceTree = "<group>"; };
 		33F8A1771FD83F5400A8A180 /* PokeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokeList.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				33F8A1771FD83F5400A8A180 /* PokeList.entitlements */,
 				3328D8F51FD82DD2006EF67C /* AppDelegate.swift */,
 				3328D8F71FD82DD2006EF67C /* ViewController.swift */,
+				33DCF5CC1FDA9A2C00B06786 /* PokemonListTableViewController.swift */,
 				33DCF5C91FD9340200B06786 /* Models */,
 				3328D8F91FD82DD2006EF67C /* Main.storyboard */,
 				3328D8FC1FD82DD2006EF67C /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33DCF5C61FD932F700B06786 /* Pokedex.swift in Sources */,
+				33DCF5CD1FDA9A2C00B06786 /* PokemonListTableViewController.swift in Sources */,
 				3328D8F81FD82DD2006EF67C /* ViewController.swift in Sources */,
 				3328D8F61FD82DD2006EF67C /* AppDelegate.swift in Sources */,
 				33DCF5C41FD932ED00B06786 /* Pokemon.swift in Sources */,
@@ -305,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = PokeList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.humancoders.training.swift.PokeList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = PokeList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.humancoders.training.swift.PokeList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
