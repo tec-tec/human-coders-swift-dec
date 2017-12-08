@@ -24,7 +24,23 @@ class PokemonDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    @IBAction func network(_ sender: Any) {
+        let url = URL(string: "https://auto.ndtvimg.com/car-images/colors/maruti-suzuki/swift/maruti-suzuki-swift-silky-silver.png")!
+
+        let session = URLSession.shared
+        let task = session.dataTask(with: url) { (data, response, error) in
+
+            guard let imgData = data, let img = UIImage(data: imgData) else { return }
+
+            DispatchQueue.main.async {
+                self.imageView.image = img
+            }
+        }
+
+        task.resume()
+    }
+
     @IBAction func takePhoto(_ sender: Any) {
 
         let picker = UIImagePickerController()
