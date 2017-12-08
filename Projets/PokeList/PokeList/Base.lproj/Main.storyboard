@@ -344,12 +344,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1B-VC-Lfj">
+                                <rect key="frame" x="75" y="148" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="ySa-Ok-X0K" eventType="touchUpInside" id="zeI-zU-N2M"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-q3-ekp">
+                                <rect key="frame" x="75" y="223" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ki6-Kq-C3p"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Xc5-DW-lg0"/>
+                    <connections>
+                        <outlet property="imageView" destination="VfS-q3-ekp" id="L19-3o-wQR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpc-CM-c6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,8 @@ class PokemonDetailsViewController: UIViewController {
 
     var pokemonToDisplay: Pokemon?
 
+    @IBOutlet weak var imageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,15 +25,26 @@ class PokemonDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func takePhoto(_ sender: Any) {
 
-    /*
-    // MARK: - Navigation
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        present(picker, animated: true, completion: nil)
     }
-    */
+}
 
+extension PokemonDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageView.image = image
+        dismiss(animated: true, completion: nil)
+    }
 }
